@@ -1,0 +1,67 @@
+<div class="container" style="margin-top: 50px;">
+    <div class="row">
+        <div class="col text-center">
+            <button  data-target="#AddProjectsModel" data-toggle="modal" class="btn btn-primary">Add Projects</button>
+         
+        </div>    
+    
+    
+    </div>
+
+</div>
+
+<div class="container" style="margin-top: 20px;padding:50px;background:#49beb7;border-radius:4px;">
+    <div class="row">
+      <!-- {{res | json}}   -->
+      <table class="table table-light">
+         
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">Description</th>
+                <th scope="col">Picture</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of res,let i =index ">
+                <td>{{i+1}}</td>
+                <td>{{data.status}}</td>
+                <td>{{data.image}}</td>
+                <td><button (click)="delProject(data.id)" class="btn btn-primary ">Delete</button></td>
+              </tr>
+           
+            </tbody>
+          </table>
+        
+    </div>
+</div>
+
+<div class="modal fade " id="AddProjectsModel" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered" style="padding: 20px">
+      
+        <div class="modal-content">
+           
+            <form>
+            
+              <div class="form-group">
+                <label for="inputAddress">Name</label>
+                <input  [(ngModel)]="name" name="projectname" type="text" class="form-control" id="inputAddress" >
+              </div>
+
+                <div class="form-group">
+                    <label for="inputAddress">Description</label>
+                    <textarea  [(ngModel)]="description" name="descriptiuon"  type="text" class="form-control" id="inputAddress" ></textarea>
+                  </div>
+            
+            <div class="form-group">
+              <label for="inputAddress">Image File Name</label>
+              <input  [(ngModel)]="image" name="image" type="text" class="form-control" id="inputAddress" >
+            </div>
+           
+            
+            <button type="submit" (click)="addproject()" class="btn btn-primary">Add</button>
+          </form>
+      </div>
+    </div>
+  </div>

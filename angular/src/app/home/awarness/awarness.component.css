@@ -1,0 +1,14 @@
+img{
+    width:400px;
+    height:400px;
+   
+}
+.row{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 50px;
+}
+
+/* .jumbotron{
+    background: linear-gradient(185deg, #bcfff6 0, #a6fff4 12.5%, #8cfff3 25%, #6cfbf2 37.5%, #3cf2f2 50%, #00e8f3 62.5%, #00dff5 75%, #00d7f9 87.5%, #00cefd 100%);
+} */

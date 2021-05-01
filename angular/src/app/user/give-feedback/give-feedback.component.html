@@ -1,0 +1,22 @@
+<div class="container" style="padding: 50px;margin-top: 20px;background-color:#49beb7; border-radius: 5px;">
+    <div class="row">
+        <div class="col">
+            <div class="card-columns">
+                
+                <div *ngFor="let data of res" class="card  mb-3" style="max-width: 18rem;">
+              
+                    <div class="card-body">
+                      <h5 class="card-title">City: {{data.city}}</h5>
+                      <h5 class="card-title">Area: {{data.area}}</h5>
+                      <p class="card-text">Duration : {{data.duration}} min</p>
+                      <p class="card-text">Pressure : {{data.pressure}}</p>
+                      <p class="card-text"><button (click)="setId(data.id)" data-target="#feedbackModel" data-toggle="modal" class="btn btn-primary">Give Feedback</button></p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<app-feedback-modal [waterid]='waterid'  ></app-feedback-modal>

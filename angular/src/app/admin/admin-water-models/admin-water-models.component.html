@@ -1,0 +1,27 @@
+<div class="container" style="padding: 50px;margin-top: 20px;background-color:#49beb7; border-radius: 5px;">
+    <div class="row">
+        <div class="col">
+            <div class="card-columns">
+
+               
+                 
+                <div *ngFor="let data of res" class="card  mb-3" style="max-width: 18rem;">
+              
+                    <div class="card-body">
+                      <p class="card-text">City : {{data.city}}</p>
+                      <p class="card-text">Location: {{data.area}}</p>
+                      <p class="card-text">Duration: {{data.duration}}</p>
+                      <p class="card-text">pressure: {{data.pressure}}</p>
+                      
+                      <p class="card-text"><button (click)="deleteModel(data.id)" class="btn btn-primary">Delete</button></p>
+                    </div>
+                </div>
+               
+
+                
+                
+                
+
+            </div>
+        </div>
+    </div>

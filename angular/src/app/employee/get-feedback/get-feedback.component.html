@@ -1,0 +1,26 @@
+<div class="container" style="margin-top:10px;">
+    <div class="row">
+        <div class="col">
+            <div class="card-columns">
+                <!-- {{res | json}} -->
+               
+
+                
+                <div *ngFor="let data of res" class="card  mb-3" style="max-width: 18rem;">
+              
+                    <div class="card-body">
+                      <h5 class="card-title">UserId : {{data.user_id}}</h5>
+                      <p class="card-text">Duration : {{data.duration}}min</p>
+                      <p class="card-text">Feedback : {{data.feedback}}</p>
+                      <p class="card-text">Waterid : {{data.water_id}}</p>
+                      <p class="card-text"><button (click)="del(data.id)" class="btn btn-primary">Delete</button></p>
+                    </div>
+                </div>
+
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <app-delete-model></app-delete-model> -->

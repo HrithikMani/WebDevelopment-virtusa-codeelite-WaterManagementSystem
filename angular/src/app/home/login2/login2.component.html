@@ -1,0 +1,81 @@
+<!-- <div class="container-fluid" style= "background-color: rgba(192,192,192,0.9);padding: 1%;width: 70%;margin-top:5%;opacity: 0.9">
+    <div class="row align-items-center g-5 py-5">
+      <div class=" text-center col-lg-7 text-center text-lg-start">
+        <h1 class="display-4 fw-bold lh-1 mb-3">WATER RESOURCES MANAGEMENT</h1>
+        <p class="col-lg-10 fs-4">Water management, therefore, is the need of time. It is the management of water resources for the coming generations. It involves the activity of planning, developing, distributing and managing the optimum use of water resources. There are different methods through which water management preservation can be done, some of them are explained here<a href="info.html">
+         </a>
+        </p>
+     </div>
+      <div class="col-10 mx-auto col-lg-5">
+        <form class="p-5 border rounded-3" style="background-color: #B0C4DE" method="post" action="Home.html">
+          <div class="form-floating mb-3"  >
+            <input type="text" class="form-control" id="floatingInput" placeholder="userid" required="required">
+            <label for="floatingInput">Userid</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required="required">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div>
+          <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+          <hr class="my-4">
+          <small class="text">Don't have an account ?  </small><a href=""> Sign up</a>
+        </form>
+    </div>
+    </div>
+</div>
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2021–2022 Water Management</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Privacy</a></li>
+      <li class="list-inline-item"><a href="#">Terms</a></li>
+      <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
+  </footer> -->
+
+<div class="bord container-fluid" style="margin-bottom: 10%;background-color: rgba(192,192,192,1);padding: 1%;width: 70%;margin-top:5%;opacity: 0.9">
+    <div class="row">
+        <div class="col-8">
+            
+                <h1 class="display-4 fw-bold lh-1 mb-3">WATER RESOURCES MANAGEMENT</h1>
+                <p class="col-lg-10 fs-4">Water management, therefore, is the need of time. It is the management of water resources for the coming generations. It involves the activity of planning, developing, distributing and managing the optimum use of water resources. There are different methods through which water management preservation can be done, some of them are explained here</p>
+            
+        </div>
+        <div class="col-4">
+            <div class="col mx-auto">
+                <form class="p-5 border rounded-3" style="background-color: #B0C4DE" method="post" action="Home.html">
+                    <div [ngClass]="{'disp' : success}" class=" alert alert-success text-center">
+                        {{errmsg}}
+                      </div>
+                      <div [ngClass]="{'disp' : errdisp}" class="alert alert-danger text-center">
+                        {{errmsg}}
+                      </div>
+                  <div class="form-floating mb-3"  >
+                    <input [(ngModel)]="email" type="text" name="username" class="form-control" id="floatingInput" placeholder="Username" required="required">
+                   
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input [(ngModel)]="password" type="password" name="password"  class="form-control" id="floatingPassword" placeholder="Password" required="required">
+                    
+                  </div>
+                  
+                  <button  (click)="login()" class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+                  <hr class="my-4">
+                
+                </form>
+            </div>  
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+

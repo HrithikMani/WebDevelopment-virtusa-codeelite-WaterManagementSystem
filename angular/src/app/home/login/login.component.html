@@ -1,0 +1,16 @@
+<div class="login-clean">
+    
+    <form >
+        <div [ngClass]="{'disp' : success}" class=" alert alert-success text-center">
+            {{errmsg}}
+          </div>
+          <div [ngClass]="{'disp' : errdisp}" class="alert alert-danger text-center">
+            {{errmsg}}
+          </div>
+          {{res | json}}
+        <h2 class="sr-only">Login Form</h2>
+        <div class="illustration"><i class="icon ion-android-car"></i></div>
+        <div class="form-group"><input [(ngModel)]="email" class="form-control" type="email" name="email" placeholder="Email"></div>
+        <div class="form-group"><input [(ngModel)]="password"  class="form-control" type="password" name="password" placeholder="Password"></div>
+        <div class="form-group"><button (click)="login()" class="btn btn-primary btn-block" type="submit">Log In</button></div><a class="forgot" href="#">Forgot your email or password?</a></form>
+</div>

@@ -1,0 +1,47 @@
+<div class="container" style="margin-top: 50px;">
+  <div class="row">
+      <div class="col text-center">
+          <button  data-target="#UpdateUserDetails" data-toggle="modal" class="btn btn-primary">Add User</button>
+       
+      </div>    
+  
+  
+  </div>
+
+</div>
+<!-- 
+{{res | json}} -->
+
+<div class="container" style="margin-top: 20px;padding:50px; background-color: #49beb7;">
+    <div class="row">
+        <table class="table table-light">
+            <thead>
+              <tr>
+                
+                <th scope="col">id</th>
+                <th scope="col">Username</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Delete</th>
+               
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of res,let i=index">
+                
+                <td >{{i+1}}</td>
+                <td>{{data.username}}</td>
+                <td>{{data.email}}</td>
+                <td>{{data.phone}}</td>
+               
+                <td><button (click)="delUser(data.id)" class="btn btn-primary ">Delete</button></td>
+                
+              </tr>
+          
+            </tbody>
+          </table>
+        
+    </div>
+</div>
+
+<app-update-model></app-update-model>

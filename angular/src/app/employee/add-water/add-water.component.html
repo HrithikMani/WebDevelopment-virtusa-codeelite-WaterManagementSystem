@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-2 col-sm-12">
+        </div>
+        <div class="col col-sm-12">
+            <div class="login-clean">
+              
+                    <form>
+                      <div [ngClass]="{'disp' : success}" class=" alert alert-success text-center">
+                        {{errmsg}}
+                      </div>
+                      <div [ngClass]="{'disp' : errdisp}" class="alert alert-danger text-center">
+                        {{errmsg}}
+                      </div>
+ 
+                        <div class="form-row">
+                    
+                          <div class="form-group col-md-6">
+                            <label for="City">City</label>
+                            <select [(ngModel)]="city"  name="city" class="custom-select mr-sm-2" id="cityId">
+                              <option selected>Choose one</option>
+                              <option value="Hyderabad">Hyderabad</option>
+                              <option value="Banglore">Banglore</option>
+                              <option value="Chennai">Chennai</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="AreaName">Area Name</label>
+                            <input [(ngModel)]="area" name="area"   type="text" class="form-control" id="AreaName" placeholder="Please Enter Area name">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="Duration">Duration</label>
+                            <input [(ngModel)]="duration"  name="duration" type="text" class="form-control" id="Duration" placeholder="Please Enter Duration">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="pressure">Water Pressure</label>
+                          <input [(ngModel)]="pressure"  name="pressure" type="text" class="form-control" id="pressure" placeholder="Please Enter Value">
+                        </div>
+                        <div class="form-group">
+                          <label for="Desc">Water Description</label>
+                          <textarea  [(ngModel)]="desc" name="description" type="textarea" class="form-control" id="Desc" placeholder="Please Enter Description"></textarea>
+                        </div>
+                        <div class="form-group text-center">
+                            
+                            <input (click)="addWater()"  type="button" class="btn btn-primary" value="Add">    
+                        </div>
+                        
+                      </form>
+                  
+              
+            </div>
+            
+        </div>
+        <div class="col-md-2 col-sm-12">
+        </div>
+    </div>
+</div>  

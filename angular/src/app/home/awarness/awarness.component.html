@@ -1,0 +1,23 @@
+
+<div class="jumbotron">
+  <div class="container-fluid marketing" style="background-color: ghostwhite; padding-top: 4%;">
+      
+
+  <hr class="featurette-divider">
+ 
+  <div *ngFor="let data of res" class="row featurette">
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading">{{data.name}}</h2>
+      <strong>
+        {{data.status}}
+      </strong>
+    </div>
+    <div class="col-md-5 order-md-1">
+      <img src="../assets/awarness/{{data.image}}" />
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+ 
+</div>

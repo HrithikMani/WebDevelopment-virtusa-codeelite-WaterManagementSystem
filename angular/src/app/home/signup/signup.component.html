@@ -1,0 +1,19 @@
+<div class="login-clean">
+    <form >
+        <div [ngClass]="{'disp' : success}" class=" alert alert-success text-center">
+            {{errmsg}}
+          </div>
+          <div [ngClass]="{'disp' : errdisp}" class="alert alert-danger text-center">
+            {{errmsg}}
+          </div>
+       
+        <h2 class="sr-only">Register Form</h2>
+        <div class="illustration"><i class="icon ion-android-car"></i></div>
+        <div class="form-group"><input [(ngModel)]="email" class="form-control" type="email" name="email" placeholder="Email"></div>
+        <div class="form-group"><input [(ngModel)]="username" class="form-control" type="email" name="email" placeholder="Enter Name"></div>
+        <div class="form-group"><input [(ngModel)]="phone" class="form-control" type="email" name="email" placeholder="Enter Phone Number"></div>
+        <div class="form-group"><input [(ngModel)]="password"  class="form-control" type="password" name="password" placeholder="Password"></div>
+        <div class="form-group"><input [(ngModel)]="repassword"   class="form-control" type="password" name="password" placeholder="Re enter Password"></div>
+        <div class="form-group"><button (click)="signup()" class="btn btn-primary btn-block" type="submit">Sign up</button></div>
+    </form>
+</div>
